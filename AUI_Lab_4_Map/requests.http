@@ -1,0 +1,49 @@
+### Get all maps
+
+GET http://localhost:8081/api/maps
+
+### Get single map
+
+GET http://localhost:8081/api/maps/4a1a63f7-afa7-4dd0-b605-143d0082f70a
+
+### Get single map, not existing
+
+GET http://localhost:8081/api/maps/262c5fbd-a159-4632-a50e-68ba21fb1a24
+
+### Get gamemode maps
+
+GET http://localhost:8081/api/gamemodes/e1500356-ec4f-4e54-88e4-a847532f8dfc/maps
+
+### Get gamemode maps, not existing
+
+GET http://localhost:8081/api/gamemodes/94d6561e-f123-40f9-9adc-b98ec502ec87/maps
+
+### Create new map
+
+PUT http://localhost:8081/api/maps/262c5fbd-a159-4632-a50e-68ba21fb1a24
+Content-Type: application/json
+
+{
+  "name": "Double Cross",
+  "healthKits": 9,
+  "gameMode": "e1500356-ec4f-4e54-88e4-a847532f8dfc"
+}
+
+### Update existing map
+
+PUT http://localhost:8081/api/maps/262c5fbd-a159-4632-a50e-68ba21fb1a24
+Content-Type: application/json
+
+{
+  "name": "Double Cross Updated",
+  "healthKits": 12,
+  "gameMode": "e1500356-ec4f-4e54-88e4-a847532f8dfc"
+}
+
+### Delete map
+
+DELETE http://localhost:8081/api/maps/262c5fbd-a159-4632-a50e-68ba21fb1a24
+
+### Delete gamemode
+
+DELETE http://localhost:8081/api/gamemodes/e1500356-ec4f-4e54-88e4-a847532f8dfc

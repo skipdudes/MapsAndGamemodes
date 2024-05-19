@@ -1,0 +1,96 @@
+### Get all maps
+
+GET http://localhost:8083/api/maps
+
+### Get single map
+
+GET http://localhost:8083/api/maps/4a1a63f7-afa7-4dd0-b605-143d0082f70a
+
+### Get single map, not existing
+
+GET http://localhost:8083/api/maps/262c5fbd-a159-4632-a50e-68ba21fb1a24
+
+### Get gamemode maps
+
+GET http://localhost:8083/api/gamemodes/e1500356-ec4f-4e54-88e4-a847532f8dfc/maps
+
+### Get gamemode maps, not existing
+
+GET http://localhost:8083/api/gamemodes/94d6561e-f123-40f9-9adc-b98ec502ec87/maps
+
+### Create new map
+
+PUT http://localhost:8083/api/maps/262c5fbd-a159-4632-a50e-68ba21fb1a24
+Content-Type: application/json
+
+{
+  "name": "Double Cross",
+  "healthKits": 9,
+  "gameMode": "e1500356-ec4f-4e54-88e4-a847532f8dfc"
+}
+
+### Update existing map
+
+PUT http://localhost:8083/api/maps/262c5fbd-a159-4632-a50e-68ba21fb1a24
+Content-Type: application/json
+
+{
+  "name": "Double Cross Updated",
+  "healthKits": 12,
+  "gameMode": "e1500356-ec4f-4e54-88e4-a847532f8dfc"
+}
+
+### Delete map
+
+DELETE http://localhost:8083/api/maps/262c5fbd-a159-4632-a50e-68ba21fb1a24
+
+### Get all gamemodes
+
+GET http://localhost:8083/api/gamemodes
+
+### Get single gamemode
+
+GET http://localhost:8083/api/gamemodes/e1500356-ec4f-4e54-88e4-a847532f8dfc
+
+### Get single gamemode, not existing
+
+GET http://localhost:8083/api/gamemodes/94d6561e-f123-40f9-9adc-b98ec502ec87
+
+### Create new gamemode
+
+PUT http://localhost:8083/api/gamemodes/94d6561e-f123-40f9-9adc-b98ec502ec87
+Content-Type: application/json
+
+{
+  "name": "Control Point",
+  "objectiveNumber": 5
+}
+
+### Update existing gamemode
+
+PUT http://localhost:8083/api/gamemodes/94d6561e-f123-40f9-9adc-b98ec502ec87
+Content-Type: application/json
+
+{
+  "name": "Control Point Extended",
+  "objectiveNumber": 7
+}
+
+### Delete gamemode
+
+DELETE http://localhost:8083/api/gamemodes/94d6561e-f123-40f9-9adc-b98ec502ec87
+
+### Delete gamemode "Capture the Flag"
+
+DELETE http://localhost:8083/api/gamemodes/e1500356-ec4f-4e54-88e4-a847532f8dfc
+
+### Create new map for new gamemode
+
+PUT http://localhost:8083/api/maps/7a9b295a-6452-4214-bcea-53695d4fd694
+Content-Type: application/json
+
+{
+  "name": "Badlands",
+  "healthKits": 18,
+  "gameMode": "94d6561e-f123-40f9-9adc-b98ec502ec87"
+}

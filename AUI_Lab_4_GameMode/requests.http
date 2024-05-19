@@ -1,0 +1,39 @@
+### Get all gamemodes
+
+GET http://localhost:8082/api/gamemodes
+
+### Get single gamemode
+
+GET http://localhost:8082/api/gamemodes/e1500356-ec4f-4e54-88e4-a847532f8dfc
+
+### Get single gamemode, not existing
+
+GET http://localhost:8082/api/gamemodes/94d6561e-f123-40f9-9adc-b98ec502ec87
+
+### Create new gamemode
+
+PUT http://localhost:8082/api/gamemodes/94d6561e-f123-40f9-9adc-b98ec502ec87
+Content-Type: application/json
+
+{
+  "name": "Control Point",
+  "objectiveNumber": 5
+}
+
+### Update existing gamemode
+
+PUT http://localhost:8082/api/gamemodes/94d6561e-f123-40f9-9adc-b98ec502ec87
+Content-Type: application/json
+
+{
+  "name": "Control Point Extended",
+  "objectiveNumber": 7
+}
+
+### Delete gamemode
+
+DELETE http://localhost:8082/api/gamemodes/94d6561e-f123-40f9-9adc-b98ec502ec87
+
+### Delete gamemode "Capture the Flag"
+
+DELETE http://localhost:8082/api/gamemodes/e1500356-ec4f-4e54-88e4-a847532f8dfc
